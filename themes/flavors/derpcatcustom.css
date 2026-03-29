@@ -153,3 +153,14 @@ body {
 .divider__908e2:not(.isUnread__908e2) {
     border-color: var(--bg-2);
 }
+/* Mystical Avatar Status Glow */
+[class*="wrapper_"] > svg > rect[fill],
+[class*="wrapper_"] > svg > circle[fill] {
+    filter: drop-shadow(0 0 6px currentColor) drop-shadow(0 0 12px currentColor);
+    transition: filter 0.3s ease;
+}
+
+[class*="wrapper_"]:hover > svg > rect[fill],
+[class*="wrapper_"]:hover > svg > circle[fill] {
+    filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor);
+}
