@@ -17,7 +17,7 @@ body {
     /* font, change to '' for default discord font */
     --font: 'figtree'; /* change to '' for default discord font */
     --code-font: ''; /* change to '' for default discord font */
-    font-weight: 400 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
+    font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
@@ -52,16 +52,16 @@ body {
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
     /* background image options */
-    --background-image: yes; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image: on; /* off: no background image, on: enable background image (must set url variable below) */
     --background-image-url: url('https://raw.githubusercontent.com/thecoltonk/hk-discord/refs/heads/master/bg.jpg'); /* url of the background image */
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
-    --transparency-tweaks: yes; /* off: no changes, on: remove some elements for better transparency */
+    --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
     --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
-    --panel-blur: yes; /* off: no changes, on: blur the background of panels */
+    --panel-blur: on; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
-    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+    --bg-floating: rgba(22, 22, 29, 0.9); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
     /* chatbar options */
     --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
@@ -76,7 +76,7 @@ body {
     --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
-    --text-0: var(--bg-3); /* text on colored elements */
+    --text-0: rgba(22, 22, 29, 0.6); /* text on colored elements */
     --text-1: hsl(229, 73%, 95%); /* other normally white text */
     --text-2: #c0caf5; /* headings and important text */
     --text-3: #a9b1d6; /* normal text */
@@ -84,10 +84,10 @@ body {
     --text-5: #414868; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsl(230, 22%, 25%); /* dark buttons when clicked */
-    --bg-2: hsl(230, 21%, 19%); /* dark buttons */
-    --bg-3: #16161d; /* spacing, secondary elements */
-    --bg-4: #1a1b26; /* main background color */
+    --bg-1: hsla(230, 22%, 25%, 0.6); /* dark buttons when clicked */
+    --bg-2: hsla(230, 21%, 19%, 0.6); /* dark buttons */
+    --bg-3: rgba(22, 22, 29, 0.6); /* spacing, secondary elements */
+    --bg-4: rgba(26, 27, 38, 0.6); /* main background color */
     --hover: hsla(225, 22%, 41%, 0.125); /* channels and buttons when hovered */
     --active: hsla(225, 22%, 41%, 0.267); /* channels and buttons when clicked or selected */
     --active-2: hsla(225, 22%, 41%, 0.333); /* extra state for transparent buttons */
@@ -153,6 +153,7 @@ body {
 .divider__908e2:not(.isUnread__908e2) {
     border-color: var(--bg-2);
 }
+
 /* Mystical Avatar Status Glow */
 [class*="wrapper_"] > svg > rect[fill],
 [class*="wrapper_"] > svg > circle[fill] {
